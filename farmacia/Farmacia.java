@@ -1,26 +1,26 @@
 package farmacia;
 
 public class Farmacia {
-	private String remedio;
+	private String nome;
 	private int unidade;
 	private String volume;
 	private double valor;
-	private boolean receita;
+	private String marca;
 	
-	public Farmacia(String remedio, int unidade, String volume, double valor, boolean receita) {
-		this.remedio = remedio;
+	public Farmacia(String nome, int unidade, String volume, double valor, String marca) {
+		this.nome = nome;
 		this.unidade = unidade;
 		this.volume = volume;
 		this.valor = valor;
-		this.receita = receita;
+		this.marca = marca;
 	}
 
-	public String getRemedio() {
-		return remedio;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setRemedio(String remedio) {
-		this.remedio = remedio;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public int getUnidade() {
@@ -47,25 +47,24 @@ public class Farmacia {
 		this.valor = valor;
 	}
 
-	public boolean isReceita() {
-		return receita;
+	public String getMarca() {
+		return marca;
 	}
 
-	public void setReceita(boolean receita) {
-		this.receita = receita;
+	public void setMarca(String marca) {
+		this.marca = marca;
 	}
 	
 	public void visualizar() {
 		
 		System.out.println("*************************************************");
-		System.out.println("              Informações do Remédio             ");
+		System.out.println("                    Informações                  ");
 		System.out.println("*************************************************");
-		System.out.println("Nome do Remédio ou substância: " + this.remedio);
+		System.out.println("Nome do Produto: " + this.nome);
 		System.out.println("Quantidade em Unidades: " + this.unidade);
-		System.out.println("Volume do Remédio: " + this.volume);
+		System.out.println("Volume do Produto: " + this.volume);
 		System.out.println("Valor: R$" + this.valor);
-		System.out.println("Necessidade de Receita: " + this.receita + "\n\n");
-		
+		System.out.println("Marca do Produto: " + this.marca);
 	}
 
 }
